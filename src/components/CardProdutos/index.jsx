@@ -17,7 +17,7 @@ const CardProdutos = () => {
             <div class="card-body">
                 <Link to={`/produtos/`}>Ver detalhes</Link>
             </div>
-            <button class="btn btn-info">Adiconar ao Carrinho</button>
+            <button class="btn btn-info">Adicionar ao Carrinho</button>
         </div>
     );
 };
