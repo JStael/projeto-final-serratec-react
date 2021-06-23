@@ -1,4 +1,3 @@
-import './estilos.css'
 import CardFormulario from '../../components/CardFormulario';
 import Logo from '../../components/Logo';
 import imagemLogo from '../../assets/img/logo_petshop.png';
