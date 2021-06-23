@@ -5,7 +5,7 @@ const Logo = (props) => {
     <section className="principal fundo">
       <div>
         <img src={props.src} alt={props.alt} />
-        <h1>{props.titulo}</h1>
+        {/* <h1>{props.titulo}</h1> */}
       </div>
     </section>
   )
