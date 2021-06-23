@@ -23,7 +23,7 @@ const Produto = () => {
         
       <h1 className='produto'>{produto.nome}</h1>
       <h1 className="preco">R$ {produto.preco}</h1>
-      <p>{produto.descrecao}</p>
+      <p>{produto.descricao}</p>
     </div>
     <button>Adicionar ao carrinho</button>
     </form>
