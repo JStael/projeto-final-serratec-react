@@ -1,4 +1,4 @@
-import FormularioLogin from "../componentes/FormularioLogin";
+import FormularioLogin from '../../components/FormularioLogin'
 
 const Login = () => {
     return <FormularioLogin />

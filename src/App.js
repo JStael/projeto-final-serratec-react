@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
 import './App.css';
+import Login from '../src/pages/Login'
 
 function App() {
 
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/cadastro">
             <Cadastro />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
       </BrowserRouter>
