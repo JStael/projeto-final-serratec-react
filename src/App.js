@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Cadastro from './pages/Cadastro';
+import Home from './pages/Home';
 import './App.css';
 
 function App() {
+
+  const menu = [
+    {
+      titulo: 'Inicio',
+      link: '/'
+    },
+    {
+      titulo: 'Produtos',
+      link: '/produtos'
+    },
+    {
+      titulo: 'Cadastre-se',
+      link: '/cadastro'
+    },
+    {
+      titulo: 'Login',
+      link: '/login'
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Navbar navbar={menu} />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/cadastro">
+            <Cadastro />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
