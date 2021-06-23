@@ -9,13 +9,11 @@ header {
 header a {
     border: 2px solid #fcfcfc;
     border-radius: 25px;
-    width: 160px;
+    width: 150px;
     color: #fcfcfc;
-    font-size: .8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 20px;
+    font-size: .7rem;
+    display: flex;  
+    padding: 3px 10px;
 }
 
 header a:hover {
@@ -24,6 +22,7 @@ header a:hover {
 
 header a p {
     margin: 0;
+    padding: 0;
     line-height: 1rem;
 }
 
