@@ -4,6 +4,7 @@ import Cadastro from "./pages/Cadastro";
 import Home from "./pages/Home";
 import "./App.css";
 import Login from "../src/pages/Login";
+import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
 
 function App() {
@@ -25,7 +26,6 @@ function App() {
             link: "/login",
         },
     ];
-
     return (
         <div className="App">
             <BrowserRouter>
@@ -39,6 +39,9 @@ function App() {
                     </Route>
                     <Route path="/login">
                         <Login />
+                    </Route>
+                    <Route path="/carrinho">
+                        <Carrinho />
                     </Route>
                     <Route path="/produtos">
                         <Produtos />
