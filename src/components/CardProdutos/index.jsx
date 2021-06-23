@@ -12,15 +12,11 @@ const CardProdutos = (props) => {
                 <li class="list-group-item">Preço</li>
             </ul>
             <div class="card-body">
-                <Link to={`/produtos/${props.id}`}>Ver detalhes</Link>
+                <Link to={`/produto/${props.id}`}>Ver detalhes</Link>
             </div>
-<<<<<<< HEAD
-            <button class="btn btn-info">Adicionar ao Carrinho</button>
-=======
             <button class="btn btn-warning">
                 <i class="fas fa-shopping-cart"></i> Adiconar ao Carrinho
             </button>
->>>>>>> fdec4327dfa73da41dcbad5c3af68366b207124a
         </div>
     );
 };
