@@ -1,0 +1,27 @@
+section {
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+
+}
+
+.header {
+    padding: 30px;
+    display: flex;
+    align-items:flex-end;
+    margin-bottom: 30px;
+    background-color: #fcfcfc;
+}
+
+.header p {
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.header img {
+    width: 100px;
+}
+
+table {
+    background-color: #fcfcfc;
+}

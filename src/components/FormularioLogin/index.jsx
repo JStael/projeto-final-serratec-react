@@ -20,7 +20,7 @@ const FormularioLogin = () => {
     }
     return (
 
-        <form onSubmit={logar}>
+        <form className='formLogin' onSubmit={logar}>
             <h1>Login</h1>
 
             <label>E-mail</label>
