@@ -72,7 +72,7 @@ const ClienteCadastrar = () => {
       estado: estado
     }
     console.log(usuario);
-    http.post('auth/register', usuario)
+    http.post('cliente', usuario)
       .then(response => {
         console.log(response.data);
         console.log(usuario);

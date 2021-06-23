@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import ClienteCadastrar from "./pages/ClienteCadastrar";
+import ClienteEditar from "./pages/ClienteEditar";
 import Home from "./pages/Home";
 import "./App.css";
 import Login from "../src/pages/Login";
@@ -39,6 +40,9 @@ function App() {
                     </Route>
                     <Route path="/clienteCadastro">
                         <ClienteCadastrar />
+                    </Route>
+                    <Route path="/clienteEditar">
+                        <ClienteEditar />
                     </Route>
                     <Route path="/login">
                         <Login />
