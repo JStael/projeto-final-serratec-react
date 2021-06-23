@@ -4,8 +4,13 @@ import Navbar from './components/Navbar';
 import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
 import './App.css';
+<<<<<<< HEAD
 import Login from '../src/pages/Login'
 import Produto from './pages/Produto';
+=======
+import Produto from './pages/Produto';
+import Login from '../src/pages/Login';
+>>>>>>> 9cb2c80e90cbe871417eec0f7433c770844c0c36
 import Carrinho from './pages/Carrinho';
 
 function App() {

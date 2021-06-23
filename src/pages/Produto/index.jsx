@@ -10,14 +10,23 @@ const Produto = () => {
     axios.get('http://localhost:8000/produtos/'+id)
       .then(response => setProduto(response.data))
   }, [id])
+
+  const adicionarCarrinho=(evento)=>{
+    evento.preventDefault();
+    console.log('adicionado')
+  }
+
   return (
+    <form onSubmit={adicionarCarrinho}>
     <div>
         <img src={imagem} alt={produto.nome}/>
         
       <h1 className='produto'>{produto.nome}</h1>
       <h1 className="preco">R$ {produto.preco}</h1>
-      <p>{produto.descrecao}</p>
+      <p>{produto.descricao}</p>
     </div>
+    <button>Adicionar ao carrinho</button>
+    </form>
   )
 }
 export default Produto
