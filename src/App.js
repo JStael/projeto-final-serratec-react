@@ -7,6 +7,7 @@ import "./App.css";
 import Login from "../src/pages/Login";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
+import Produto from './pages/Produto';
 
 function App() {
     const menu = [
@@ -47,6 +48,9 @@ function App() {
                     </Route>
                     <Route path="/produtos">
                         <Produtos />
+                    </Route>
+                    <Route path='/produto/:id'>
+                        <Produto/>
                     </Route>
                 </Switch>
             </BrowserRouter>
