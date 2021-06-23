@@ -12,8 +12,8 @@ header a {
     width: 150px;
     height: 40px;
     color: #fcfcfc;
-    font-size: .7rem;
     display: flex;  
+    align-items: center;
     padding: 2px 10px;
 }
 
@@ -22,12 +22,13 @@ header a:hover {
 }
 
 header a p {
+    font-size: .7rem;
     margin: 0;
     padding: 0;
     line-height: 1rem;
 }
 
 .usuarioImg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }

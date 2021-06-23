@@ -12,7 +12,7 @@ const Login = () => {
     }
   
   return(<>
-        <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo}/>
+        {/* <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo}/> */}
         <FormularioLogin />
     </>
     )

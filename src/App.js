@@ -8,6 +8,7 @@ import Login from "../src/pages/Login";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
 import Produto from './pages/Produto';
+import Footer from '../src/components/Footer';
 
 function App() {
     const menu = [
@@ -46,6 +47,7 @@ function App() {
                     </Route>
                 </Switch>
             </BrowserRouter>
+                <Footer />
         </div>
     );
 }
