@@ -71,9 +71,11 @@ const ClienteCadastrar = () => {
       cidade: cidade,
       estado: estado
     }
+    console.log(usuario);
     http.post('auth/register', usuario)
       .then(response => {
         console.log(response.data);
+        console.log(usuario);
         localStorage.setItem('token', response.data.access_token);
         alert(`Usuário ${nome} cadastrada com sucesso!`);
         setNome('')

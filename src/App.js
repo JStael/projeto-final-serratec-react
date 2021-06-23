@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Cadastro from "./pages/ClienteCadastrar";
+import ClienteCadastrar from "./pages/ClienteCadastrar";
 import Home from "./pages/Home";
 import "./App.css";
 import Login from "../src/pages/Login";
@@ -21,7 +21,7 @@ function App() {
         },
         {
             titulo: "Cadastre-se",
-            link: "/cadastro",
+            link: "/clienteCadastro",
         },
         {
             titulo: "Login",
@@ -37,8 +37,8 @@ function App() {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/cadastro">
-                        <Cadastro />
+                    <Route path="/clienteCadastro">
+                        <ClienteCadastrar />
                     </Route>
                     <Route path="/login">
                         <Login />

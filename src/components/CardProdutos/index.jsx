@@ -3,19 +3,19 @@ import "./estilos.css";
 import imagem from "../../assets/img/produto.jpeg";
 const CardProdutos = (props) => {
     return (
-        <div class="card">
-            <img src={imagem} class="card-img-top" alt="..."></img>
-            <div class="card-body">
-                <h5 class="card-title">Nome Produto</h5>
+        <div className="card">
+            <img src={imagem} className="card-img-top" alt="..."></img>
+            <div className="card-body">
+                <h5 className="card-title">Nome Produto</h5>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Preço</li>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">Preço</li>
             </ul>
-            <div class="card-body">
+            <div className="card-body">
                 <Link to={`/produtos/${props.id}`}>Ver detalhes</Link>
             </div>
-            <button class="btn btn-warning">
-                <i class="fas fa-shopping-cart"></i> Adiconar ao Carrinho
+            <button className="btn btn-warning">
+                <i className="fas fa-shopping-cart"></i> Adiconar ao Carrinho
             </button>
         </div>
     );
