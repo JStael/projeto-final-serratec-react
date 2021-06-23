@@ -9,6 +9,7 @@ import Login from "../src/pages/Login";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
 import Produto from './pages/Produto';
+import Categorias from "./pages/Categorias";
 
 function App() {
     const menu = [
@@ -19,6 +20,10 @@ function App() {
         {
             titulo: "Produtos",
             link: "/produtos",
+        },
+        {
+            titulo: "Categorias",
+            link: "/categorias",
         },
         {
             titulo: "Cadastre-se",
@@ -55,6 +60,9 @@ function App() {
                     </Route>
                     <Route path='/produto/:id'>
                         <Produto/>
+                    </Route>
+                    <Route path="/categorias">
+                        <Categorias />
                     </Route>
                 </Switch>
             </BrowserRouter>
