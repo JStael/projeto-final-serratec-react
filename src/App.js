@@ -18,15 +18,7 @@ function App() {
         {
             titulo: "Produtos",
             link: "/produtos",
-        },
-        {
-            titulo: "Cadastre-se",
-            link: "/cadastro",
-        },
-        {
-            titulo: "Login",
-            link: "/login",
-        },
+        }
     ];
     return (
         <div className="App">
