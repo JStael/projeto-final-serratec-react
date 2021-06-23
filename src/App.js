@@ -4,6 +4,7 @@ import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
 import './App.css';
 import Login from '../src/pages/Login'
+import Produto from './pages/Produto';
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/produto/:id">
+            <Produto/>
           </Route>
         </Switch>
       </BrowserRouter>
