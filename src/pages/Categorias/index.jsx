@@ -28,9 +28,12 @@ const Categorias = () => {
   return (<div>
     <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo} />
     <h1>Categorias</h1>
-    {categorias.map((item) =>
+    <Card id={'item.id'} nome={'item.nome'} url={'produtos'}/>
+    <Card id={'item.id'} nome={'item.nome'} url={'produtos'}/>
+    <Card id={'item.id'} nome={'item.nome'} url={'produtos'}/>
+    {/* {categorias.map((item) =>
       <Card key={item.id} id={item.id} nome={item.nome} url={'produtos'}/>
-    )}
+    )} */}
   </div>
 
   )
