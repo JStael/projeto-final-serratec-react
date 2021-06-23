@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
 import './App.css';
-import Login from '../src/pages/Login'
+import Login from '../src/pages/Login';
+import Carrinho from './pages/Carrinho';
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/carrinho">
+            <Carrinho />
           </Route>
         </Switch>
       </BrowserRouter>
