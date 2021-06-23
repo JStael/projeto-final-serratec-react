@@ -9,11 +9,8 @@ import Login from "../src/pages/Login";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
 import Produto from './pages/Produto';
-<<<<<<< HEAD
 import Footer from '../src/components/Footer';
-=======
 import Categorias from "./pages/Categorias";
->>>>>>> 2e2675dc36277c85bebf16eb936664edaf61d7d6
 
 function App() {
     const menu = [
