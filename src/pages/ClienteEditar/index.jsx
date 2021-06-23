@@ -1,4 +1,3 @@
-import './estilos.css'
 import CardFormulario from '../../components/CardFormulario';
 import Logo from '../../components/Logo';
 import imagemLogo from '../../assets/img/logo_petshop.png';
@@ -24,6 +23,21 @@ const ClienteEditar = () => {
   const [bairro, setBairro] = useState('');
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
+
+  useEffect(() => {
+    http.get('cliente/' + id)
+      .then(response => {
+        setNome(response.data.nome)
+        setUserName(response.data.userName)
+        setTelefone(response.data.telefone)
+        setCep(response.data.cep)
+        setRua(response.data.rua)
+        setNumero(response.data.numero)
+        setBairro(response.data.bairro)
+        setCidade(response.data.cidade)
+        setEstado(response.data.estado)
+      })
+  }, [id])
 
   const cepHandle = (evento) => {
     if(evento.target.value.length <= 8)
@@ -52,31 +66,23 @@ const ClienteEditar = () => {
     evento.preventDefault();
     const usuario = {
       nome: nome,
-      email: email,
       userName: userName,
-      senha: senha,
-      cpf: cpf,
       telefone: telefone,
-      dataNascimento: dataNascimento,
       cep: cep,
       rua: rua,
       numero: numero,
       bairro: bairro,
       cidade: cidade,
-      estado: estado
+      estado: estado,
+      id: id
     }
-    http.post('auth/register', usuario)
+    http.put('cliente/' + id, usuario)
       .then(response => {
         console.log(response.data);
-        localStorage.setItem('token', response.data.access_token);
-        alert(`Usuário ${nome} cadastrada com sucesso!`);
+        alert(`Usuário ${nome} atualizado com sucesso!`);
         setNome('')
-        setEmail('')
         setUserName('')
-        setSenha('')
-        setCpf('')
         setTelefone('')
-        setDataNascimento('')
         setCep('')
         setRua('')
         setNumero('')
@@ -93,35 +99,19 @@ const ClienteEditar = () => {
   return (<div>
     <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo} />
     <CardFormulario>
-      <h1>Página de Cadastro</h1>
+      <h1>Edição de Cadastro</h1>
       <form className="formCadastro" onSubmit={efetuarCadastro}>
         <div>
           <label>Nome</label>
           <input required type="text" value={nome} onChange={(evento) => setNome(evento.target.value)} placeholder="Digite seu nome completo" />
         </div>
         <div>
-          <label>Email</label>
-          <input required type="email" value={email} onChange={(evento) => setEmail(evento.target.value)} placeholder="Digite seu email" />
-        </div>
-        <div>
           <label>Username</label>
           <input required type="text" value={userName} onChange={(evento) => setUserName(evento.target.value)} placeholder="Digite seu nome de usuário" />
         </div>
         <div>
-          <label>Senha</label>
-          <input required type="password" value={senha} onChange={(evento) => setSenha(evento.target.value)} placeholder="Crie uma senha de 8 a 15 digitos" />
-        </div>
-        <div>
-          <label>CPF</label>
-          <input required type="number" value={cpf} onChange={cpfHandle} placeholder="Apenas os 11 digitos" />
-        </div>
-        <div>
           <label>Telefone</label>
           <input required type="number" value={telefone} onChange={(evento) => setTelefone(evento.target.value)} placeholder="(XX) 99999-9999" />
-        </div>
-        <div>
-          <label>Data de Nascimento</label>
-          <input required type="data" value={dataNascimento} onChange={(evento) => setDataNascimento(evento.target.value)} placeholder="DD-MM-YYYY" />
         </div>
         <div>
           <label>Cep</label>

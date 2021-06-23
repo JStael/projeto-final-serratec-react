@@ -17,7 +17,7 @@ const Produto = () => {
   }
 
   return (
-    <form onSubmit={adicionarCarrinho}>
+    <form onSubmit={adicionarCarrinho} >
     <div>
         <img src={imagem} alt={produto.nome}/>
         
