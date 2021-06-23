@@ -46,13 +46,11 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-<<<<<<< HEAD
           <Route path="/produto/:id">
             <Produto/>
-=======
+          </Route>
           <Route path="/carrinho">
             <Carrinho />
->>>>>>> 6799b542bdf5dc8023f73729e866b55ac4225c3e
           </Route>
         </Switch>
       </BrowserRouter>
