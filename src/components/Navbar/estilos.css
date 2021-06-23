@@ -5,18 +5,21 @@
 }
 
 .navbar ul {
-  padding: 12px;
+  padding: 3px;
   margin: 0;
 }
+
 .navbar ul li {
   display: inline-block;
-  font-size: 20px;
   margin-left: 20px;
-  font-weight: 100;
 }
+
 .navbar ul li a {
   color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
 }
+
 a {
   text-decoration: none;
 }
