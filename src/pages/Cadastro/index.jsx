@@ -16,13 +16,15 @@ const Cadastro = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [endereco, setEndereco] = useState('');
 
   const efetuarCadastro = (evento) => {
     evento.preventDefault();
     const usuario = {
       nome: nome,
       email: email,
-      senha: senha
+      senha: senha,
+      endereco: endereco
     }
     http.post('auth/register', usuario)
     .then(response => {
@@ -51,6 +53,10 @@ const Cadastro = () => {
         <div>
           <label>Senha</label>
           <input required type="password" value={senha} onChange={(evento) => setSenha(evento.target.value)} />
+        </div>
+        <div>
+          <label>Endereco</label>
+          <input required type="text" value={endereco} onChange={(evento) => setEndereco(evento.target.value)} />
         </div>
         <button>Salvar</button>
       </form>
