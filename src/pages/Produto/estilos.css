@@ -1,0 +1,17 @@
+.descricao{
+    justify-content: center;
+    width: 100%;
+}
+.row{
+    margin-top: 16px;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+button{
+    width: 50%;
+}
+.col{
+    text-align: center;
+}
