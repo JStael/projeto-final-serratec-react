@@ -1,14 +1,13 @@
 .formCadastro {
   width: 650px;
   min-height: 450px;
-  margin: 0 auto;
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fcfcfc;
-  margin-top: 50px;
+  margin: 50px auto;
   border-radius: 15px;
   -webkit-box-shadow: 10px 10px 17px 1px rgba(115,115,115,1);
   -moz-box-shadow: 10px 10px 17px 1px rgba(115,115,115,1);
@@ -28,7 +27,6 @@ div {
   display: block;
   width: 100%;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 input {
