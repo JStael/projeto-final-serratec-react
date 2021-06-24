@@ -23,7 +23,7 @@ const Produto = () => {
         <div className="col">
         <img src={imagem} alt={produto.nome}/>
         </div>
-        <div className="col">
+        <div className="col card card-body">
       <h1 className='produto'>{produto.nome}</h1>
       <h3 className="preco">R$ {produto.preco}</h3>
       <button>Adicionar ao carrinho</button>
