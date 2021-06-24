@@ -1,19 +1,17 @@
-.card {
-  box-sizing: border-box;
-  background-color: #1abc9c;
-  padding: 8px;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #FF9A16;
-  width: 50%;
-  margin: 0 auto;
-  margin-bottom: 8px;
+.cardCategoria {
+    padding: 10px;
+    width: 17rem;
+    margin: 1rem;
+    /* background-color: #1abc9c;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ff9a16; */
 }
 
-.link {
-  background-color: #FF9A16;
-  border-radius: 5px;
-  color: black;
-  padding: 5px;
-  margin-bottom: 10px;
-}
+/* .link {
+    background-color: #ff9a16;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    margin-bottom: 10px;
+} */
