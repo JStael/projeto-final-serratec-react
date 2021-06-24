@@ -15,7 +15,7 @@ const CardProdutos = (props) => {
                 <Link to={`/produto/${props.id}`}>Ver detalhes</Link>
             </div>
             <button className="btn btn-warning btnAdicionar">
-                <i className="fas fa-shopping-cart"></i> Adiconar ao Carrinho
+                <i className="fas fa-shopping-cart"></i> Adicionar ao Carrinho
             </button>
         </div>
     );
