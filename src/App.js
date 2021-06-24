@@ -25,15 +25,7 @@ function App() {
         {
             titulo: "Categorias",
             link: "/categorias",
-        },
-        {
-            titulo: "Cadastre-se",
-            link: "/clienteCadastro",
-        },
-        {
-            titulo: "Login",
-            link: "/login",
-        },
+        }  
     ];
     return (
         <div className="App">
@@ -44,10 +36,10 @@ function App() {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/clienteCadastro">
+                    <Route path="/cliente-cadastro">
                         <ClienteCadastrar />
                     </Route>
-                    <Route path="/clienteEditar">
+                    <Route path="/cliente-editar">
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">

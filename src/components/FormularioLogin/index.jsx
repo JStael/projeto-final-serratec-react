@@ -32,7 +32,7 @@ const FormularioLogin = () => {
             <label>Senha</label>
             <input type="password" value={senha} onChange={manipularSenha} />
             <button>Login</button>
-            <p>Ainda não é cadastrado? <Link to="/cadastro"><em>Cadastre-se aqui!</em></Link></p>
+            <p>Ainda não é cadastrado? <Link to="/cliente-cadastro"><em>Cadastre-se aqui!</em></Link></p>
         </form>
     )
 
