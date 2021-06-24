@@ -69,12 +69,6 @@ function App() {
                     <Route path="/categorias">
                         <Categorias />
                     </Route>
-                    <Route exact path="/categorias/nova">
-                        <NovaCategoria />
-                    </Route>
-                    <Route exact path="/categorias/:id">
-                        <EditaCategoria />
-                    </Route>
                     <Route path="/categorias">
                         <Categorias />
                     </Route>
