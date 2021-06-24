@@ -67,14 +67,11 @@ function App() {
                     <Route path="/carrinho">
                         <Carrinho />
                     </Route>
-                    <Route path="/produtos">
+                    <Route exact path="/produtos">
                         <Produtos />
                     </Route>
                     <Route path="/produto/:id">
                         <Produto />
-                    </Route>
-                    <Route path="/categorias">
-                        <Categorias />
                     </Route>
                     <Route path="/categorias">
                         <Categorias />
