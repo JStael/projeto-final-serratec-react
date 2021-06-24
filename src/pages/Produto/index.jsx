@@ -20,10 +20,10 @@ const Produto = () => {
     <form onSubmit={adicionarCarrinho} >
     <div className="container">
       <div className="row row-cols-2">
-        <div className="col">
+        <div className="col inf">
         <img src={imagem} alt={produto.nome}/>
         </div>
-        <div className="col">
+        <div className="col card card-body inf">
       <h1 className='produto'>{produto.nome}</h1>
       <h3 className="preco">R$ {produto.preco}</h3>
       <button>Adicionar ao carrinho</button>
@@ -31,7 +31,7 @@ const Produto = () => {
      <div className="row">
        
       <div className="col descricao collapse-show card card-body" >
-      <p> <strong>Descrição do produto:</strong> <br/> <br/> {produto.descricao}</p>
+      <p> <strong>Descrição do produto:<hr/></strong>{produto.descricao}</p>
       </div>
       </div>
      

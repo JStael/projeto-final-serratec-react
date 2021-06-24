@@ -14,4 +14,14 @@ button{
 }
 .col{
     text-align: center;
+  
+}
+.card-body{
+    border-radius: 16px;
+}
+.inf{
+    max-width: 300px;
+}
+h3{
+    color:orange;
 }
