@@ -13,7 +13,7 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
 
     const novoPedido = () => {
         const pedido = {
-            email: email,
+            email: localStorage.getItem("email"),
             itens: [
                 produtos.map((item) => ({
                     codigoProduto: item.codigo,
