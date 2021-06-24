@@ -15,3 +15,6 @@ button{
 .col{
     text-align: center;
 }
+.card-body{
+    border-radius: 16px;
+}
