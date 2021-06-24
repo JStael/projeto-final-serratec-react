@@ -1,7 +1,10 @@
 .cardCategoria {
     padding: 10px;
-    width: 17rem;
+    width: 18rem;
+    height: 5rem;
     margin: 1rem;
+    text-align: center;
+    line-height: 55px;
     /* background-color: #1abc9c;
     border-radius: 5px;
     border-style: solid;

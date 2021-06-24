@@ -1,5 +1,4 @@
 import Card from "../../components/CardCategoria";
-import Logo from "../../components/Logo";
 import { useState, useEffect } from "react";
 import http from "../../components/http";
 

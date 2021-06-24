@@ -3,15 +3,9 @@ import { Link } from "react-router-dom";
 
 const CardCategoria = (props) => {
     return (
-        <div className="card cardCategoria">
-            <p>{props.nome}</p>
-            <Link
-                className="link btn btn-warning"
-                to={`/${props.url}/${props.id}`}
-            >
-                Listar produtos da categoria
-            </Link>
-        </div>
+        <Link className="card cardCategoria" to={`/${props.url}/${props.id}`}>
+            {props.nome}
+        </Link>
     );
 };
 
