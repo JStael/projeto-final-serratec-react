@@ -6,6 +6,15 @@ const CardProdutos = (props) => {
         currency: "BRL",
     });
 
+    const adicionar = () => {
+        props.adicionaProduto({
+            id: props.id,
+            nome: props.nome,
+            preco: props.preco,
+            quantidade: 1,
+        });
+    };
+
     return (
         <div className="card cardProduto">
             <img src={props.imagem} className="card-img-top" alt="..."></img>
@@ -20,7 +29,10 @@ const CardProdutos = (props) => {
             <div className="card-body">
                 <Link to={`/produto/${props.id}`}>Ver detalhes</Link>
             </div>
-            <button className="btn btn-warning btnAdicionar">
+            <button
+                className="btn btn-warning btnAdicionar"
+                onClick={adicionar}
+            >
                 <i className="fas fa-shopping-cart"></i> Adicionar ao Carrinho
             </button>
         </div>
