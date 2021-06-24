@@ -125,6 +125,7 @@ const ClienteCadastrar = () => {
                             onChange={(evento) =>
                                 setUserName(evento.target.value)
                             }
+                            minLength="5"
                             placeholder="Digite seu nome de usuário"
                         />
                     </div>
