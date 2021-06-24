@@ -8,23 +8,22 @@ import "./App.css";
 import Login from "../src/pages/Login";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
-import Produto from './pages/Produto';
-import Footer from '../src/components/Footer';
+import Produto from "./pages/Produto";
+import Footer from "../src/components/Footer";
 import Categorias from "./pages/Categorias";
 import { useState } from "react";
 
 import Pagina404 from "./pages/Pagina404";
 
 function App() {
-
-    const [token, setToken] = useState('')
+    const [token, setToken] = useState("");
     const onLogin = (token) => {
-        setToken(token)
-    }
+        setToken(token);
+    };
 
     const logout = () => {
-        setToken('')
-    }
+        setToken("");
+    };
 
     const menu = [
         {
@@ -38,7 +37,7 @@ function App() {
         {
             titulo: "Categorias",
             link: "/categorias",
-        }  
+        },
     ];
     return (
         <div className="App">
@@ -56,7 +55,7 @@ function App() {
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">
-                        <Login onLogin={onLogin}/>
+                        <Login onLogin={onLogin} />
                     </Route>
                     <Route path="/carrinho">
                         <Carrinho />
@@ -64,18 +63,21 @@ function App() {
                     <Route path="/produtos">
                         <Produtos />
                     </Route>
-                    <Route path='/produto/:id'>
-                        <Produto/>
+                    <Route path="/produto/:id">
+                        <Produto />
+                    </Route>
+                    <Route path="/categorias">
+                        <Categorias />
                     </Route>
                     <Route path="/categorias">
                         <Categorias />
                     </Route>
                     <Route>
-                        <Pagina404/>
+                        <Pagina404 />
                     </Route>
                 </Switch>
             </BrowserRouter>
-                <Footer />
+            <Footer />
         </div>
     );
 }
