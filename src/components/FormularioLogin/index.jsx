@@ -1,4 +1,4 @@
-//import axios from "axios"
+import http from "../http";
 import { useState } from "react";   
 import { Link } from 'react-router-dom';
 import './estilos.css';
@@ -15,12 +15,12 @@ const FormularioLogin = () => {
     const logar = (ev) => {
         ev.preventDefaul()
         const usuario = {}
-        usuario.email = email
-        usuario.senha = senha
+        usuario.user = email
+        usuario.pass = senha
 
-        // axios.post('http://localhost:8000/auth/login', usuario)
-        // .then(response => console.log(response.data))
-        // .catch(erro => console.log(erro))
+        http.post('auth', usuario)
+            .then(response => window.alert("Login efetuado com sucesso!"))
+            .catch(erro => console.log(erro))
     }
     return (
 
