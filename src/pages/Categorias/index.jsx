@@ -19,7 +19,7 @@ const Categorias = () => {
 
     return (
         <div className="container">
-            <div class="row">
+            <div className="row">
                 <Card id={"item.id"} nome={"item.nome"} url={"produtos"} />
                 <Card id={"item.id"} nome={"item.nome"} url={"produtos"} />
                 <Card id={"item.id"} nome={"item.nome"} url={"produtos"} />

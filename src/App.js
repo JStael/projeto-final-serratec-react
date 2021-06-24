@@ -21,8 +21,15 @@ function App() {
         setToken(token);
     };
 
+    const [userName, setUserName] = useState('')
+
+    const pegarNome = (nome) => {
+        setUserName(nome)
+    }
+    
     const logout = () => {
-        setToken("");
+        setToken('')
+        setUserName('')
     };
 
     const menu = [
@@ -42,7 +49,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header token={token} aoLogout={logout} />
+                <Header token={token} onLogout={logout} nome={userName} token={token}/>
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">
@@ -55,7 +62,7 @@ function App() {
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">
-                        <Login onLogin={onLogin} />
+                        <Login onLogin={onLogin} pegarNome={pegarNome}/>
                     </Route>
                     <Route path="/carrinho">
                         <Carrinho />
