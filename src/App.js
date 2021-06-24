@@ -24,11 +24,6 @@ function App() {
     const logout = () => {
         setToken("");
     };
-    const minhasCategorias = [
-        { nome: "Eletro" },
-        { nome: "Móveis" },
-        { nome: "Roupas" },
-    ];
 
     const menu = [
         {
@@ -43,7 +38,6 @@ function App() {
             titulo: "Categorias",
             link: "/categorias",
         },
-        {},
     ];
     return (
         <div className="App">
