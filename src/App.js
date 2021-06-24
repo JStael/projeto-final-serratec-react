@@ -11,6 +11,7 @@ import Produtos from "./pages/Produtos";
 import Produto from './pages/Produto';
 import Footer from '../src/components/Footer';
 import Categorias from "./pages/Categorias";
+import Pagina404 from "./pages/Pagina404";
 
 function App() {
     const menu = [
@@ -56,6 +57,9 @@ function App() {
                     </Route>
                     <Route path="/categorias">
                         <Categorias />
+                    </Route>
+                    <Route>
+                        <Pagina404/>
                     </Route>
                 </Switch>
             </BrowserRouter>
