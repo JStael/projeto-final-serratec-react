@@ -3,13 +3,9 @@ import CardFormulario from '../../components/CardFormulario';
 import http from "../../components/http";
 import { useState } from "react";
 import logoLogin from '../../assets/img/logoLogin.png';
+import axios from 'axios';
 
 const ClienteCadastrar = () => {
-    const logo = {
-        src: imagemLogo,
-        alt: "imagem da logo do petshop",
-        titulo: "Petshop Serratec",
-    };
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -149,7 +145,7 @@ const ClienteCadastrar = () => {
           <input required type="text" value={cidade} onChange={(evento) => setCidade(evento.target.value)} />
         </div>
         <div>
-            <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo} />
+            
             <CardFormulario>
                 <h1>Página de Cadastro</h1>
                 <form className="formCadastro" onSubmit={efetuarCadastro}>
