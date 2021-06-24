@@ -21,15 +21,24 @@ function App() {
         setToken(token);
     };
 
-    const [userName, setUserName] = useState('')
+    const [userName, setUserName] = useState("");
 
     const pegarNome = (nome) => {
-        setUserName(nome)
-    }
-    
+        setUserName(nome);
+    };
+
     const logout = () => {
-        setToken('')
-        setUserName('')
+        setToken("");
+        setUserName("");
+    };
+
+    const [carrinho, setCarrinho] = useState([]);
+    const adicionaProduto = (produto) => {
+        setCarrinho([...carrinho, produto]);
+    };
+    const removerProduto = (indice) => {
+        carrinho.splice(indice, 1);
+        setCarrinho([...carrinho]);
     };
 
     const menu = [
@@ -49,7 +58,16 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
+<<<<<<< HEAD
                 <Header token={token} onLogout={logout} nome={userName} token={token} />
+=======
+                <Header
+                    token={token}
+                    onLogout={logout}
+                    nome={userName}
+                    token={token}
+                />
+>>>>>>> 6af1f9eec195159ac598dfb90b1da7ad5ae27fbb
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">
@@ -62,16 +80,16 @@ function App() {
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">
-                        <Login onLogin={onLogin} pegarNome={pegarNome}/>
+                        <Login onLogin={onLogin} pegarNome={pegarNome} />
                     </Route>
                     <Route path="/carrinho">
-                        <Carrinho />
+                        <Carrinho produtos={carrinho} />
                     </Route>
-                    <Route exact path="/produtos">
-                        <Produtos />
+                    <Route path="/produtos">
+                        <Produtos adicionaProduto={adicionaProduto} />
                     </Route>
                     <Route path="/produto/:id">
-                        <Produto />
+                        <Produto adicionaProduto={adicionaProduto} />
                     </Route>
                     <Route path="/categorias">
                         <Categorias />

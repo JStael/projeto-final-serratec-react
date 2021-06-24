@@ -8,7 +8,7 @@ const Produto = () => {
     const { id } = useParams();
     const [produto, setProduto] = useState({});
     useEffect(() => {
-        http.get("produtos/" + id).then((response) =>
+        http.get("/produto/id/" + id).then((response) =>
             setProduto(response.data)
         );
     }, [id]);
@@ -28,7 +28,9 @@ const Produto = () => {
                     <div className="col card card-body inf">
                         <h1 className="produto">{produto.nome}</h1>
                         <h3 className="preco">R$ {produto.preco}</h3>
-                        <button>Adicionar ao carrinho</button>
+                        <button className="buttonDetalhes">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
                     <div className="row">
                         <div className="col descricao collapse-show card card-body">
