@@ -18,14 +18,26 @@ const Produto = () => {
 
   return (
     <form onSubmit={adicionarCarrinho} >
-    <div>
+    <div className="container">
+      <div className="row row-cols-2">
+        <div className="col">
         <img src={imagem} alt={produto.nome}/>
-        
+        </div>
+        <div className="col">
       <h1 className='produto'>{produto.nome}</h1>
-      <h1 className="preco">R$ {produto.preco}</h1>
-      <p>{produto.descricao}</p>
+      <h3 className="preco">R$ {produto.preco}</h3>
+      <button>Adicionar ao carrinho</button>
+      </div>
+     <div className="row">
+       
+      <div className="col descricao collapse-show card card-body" >
+      <p> <strong>Descrição do produto:</strong> <br/> <br/> {produto.descricao}</p>
+      </div>
+      </div>
+     
+      </div>
     </div>
-    <button>Adicionar ao carrinho</button>
+    
     </form>
   )
 }
