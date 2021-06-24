@@ -24,29 +24,34 @@ const Header = ({nome, token, onLogout}) => {
                         <em>Olá,</em> <strong>{nome}</strong>
                     </button>
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-                        <li><Link to="" className="dropdown-item" href="#"><i className="fas fa-user-edit"></i> Editar cadastro</Link></li>
-                        <li><Link to="" className="dropdown-item" href="#"><i className="fas fa-shopping-basket"></i> Meus pedidos</Link></li>
-                        <li><a className="dropdown-item" href="#" onClick={logout}><i className="fas fa-sign-out-alt"></i> Sair</a></li>
+                        <li><Link to="" className="dropdown-item btnLogin" href="#"><i className="fas fa-user-edit"></i> Editar cadastro</Link></li>
+                        <li><Link to="" className="dropdown-item btnLogin" href="#"><i className="fas fa-shopping-basket"></i> Meus pedidos</Link></li>
+                        <li><a className="dropdown-item btnLogin" href="#" onClick={logout}><i className="fas fa-sign-out-alt"></i> Sair</a></li>
                     </ul>
                 </div>
             )
         } 
         return (
-            <Link to="/login">
-            <img className="usuarioImg" src={iconeUsuario} alt="Icone de usuário" />
-            <p>Faça login ou cadastre-se</p> 
-        </Link>
+            <Link to="/login" className="btnLogin">
+                <img className="usuarioImg" src={iconeUsuario} alt="Icone de usuário" />
+                <p>Faça login ou cadastre-se</p> 
+            </Link>
         )
     }
 
     return (
         <header>
-            <img className="logo" src={logo} alt="Logo do e-commerce" />
+            <div className="logo">
+                <img src={logo} alt="Logo do e-commerce" />
+            </div>
             
-            <>
+            <div className="header-carrinho">
                 {verificarLogin()}
-            </>
-            
+                <div className="carrinho">
+                    <Link to="/carrinho"><i class="fas fa-shopping-cart"></i></Link>
+                    <p></p>
+                </div>
+            </div>
         </header>
     )
 }

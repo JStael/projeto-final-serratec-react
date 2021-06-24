@@ -90,9 +90,6 @@ function App() {
                     <Route path="/categorias">
                         <Categorias />
                     </Route>
-                    <Route path="/categorias">
-                        <Categorias />
-                    </Route>
                     <Route>
                         <Pagina404 />
                     </Route>

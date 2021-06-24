@@ -27,7 +27,7 @@ const Carrinho = ({ produtos }) => {
                     <tbody>
                         {produtos.map((produto) => (
                             <tr key={produto.id}>
-                                <td>{produto.id}</td>
+                                <td>{produto.quantidade}</td>
                                 <td>{produto.nome}</td>
                                 <td>{formatter.format(produto.preco)}</td>
                                 <td>
