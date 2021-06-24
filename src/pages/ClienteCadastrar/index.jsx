@@ -1,17 +1,10 @@
-import './estilos.css'
+import './estilos.css';
 import CardFormulario from '../../components/CardFormulario';
-import Logo from '../../components/Logo';
-import imagemLogo from '../../assets/img/logo_petshop.png';
 import http from "../../components/http";
 import { useState } from "react";
+import logoLogin from '../../assets/img/logoLogin.png';
 
 const ClienteCadastrar = () => {
-
-  const logo = {
-    src: imagemLogo,
-    alt: 'imagem da logo do petshop',
-    titulo: 'Petshop Serratec'
-  };
 
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -99,10 +92,10 @@ const ClienteCadastrar = () => {
   }
 
   return (<div>
-    <Logo src={logo.src} alt={logo.alt} titulo={logo.titulo} />
     <CardFormulario>
-      <h1>Página de Cadastro</h1>
       <form className="formCadastro" onSubmit={efetuarCadastro}>
+        <img src={logoLogin} alt="Logo login" />
+        <h3>Cadastro</h3>
         <div>
           <label>Nome</label>
           <input required type="text" value={nome} onChange={(evento) => setNome(evento.target.value)} placeholder="Digite seu nome completo" />

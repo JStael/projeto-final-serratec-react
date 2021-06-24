@@ -1,4 +1,4 @@
-import './estilos.css'
+
 
 const CardFormulario = (props) => {
   return (<div className="cardFormulario">
