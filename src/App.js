@@ -13,6 +13,7 @@ import Footer from '../src/components/Footer';
 import Categorias from "./pages/Categorias";
 import { useState } from "react";
 
+import Pagina404 from "./pages/Pagina404";
 
 function App() {
 
@@ -68,6 +69,9 @@ function App() {
                     </Route>
                     <Route path="/categorias">
                         <Categorias />
+                    </Route>
+                    <Route>
+                        <Pagina404/>
                     </Route>
                 </Switch>
             </BrowserRouter>
