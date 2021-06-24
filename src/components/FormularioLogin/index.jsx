@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 import logoLogin from "../../assets/img/logoLogin.png";
 
-const FormularioLogin = ({ onLogin, pegarNome }) => {
+const FormularioLogin = ({ onLogin, pegarDados }) => {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const manipularEmail = (ev) => setEmail(ev.target.value);
@@ -18,6 +18,7 @@ const FormularioLogin = ({ onLogin, pegarNome }) => {
         const usuario = {};
         usuario.user = email;
         usuario.pass = senha;
+        localStorage.setItem("email", email);
 
         http.post("auth", usuario)
             .then((response) => {
@@ -27,7 +28,10 @@ const FormularioLogin = ({ onLogin, pegarNome }) => {
                     response.data.cliente.userNameCliente
                 );
                 onLogin(response.data.token);
-                pegarNome(response.data.cliente.userNameCliente);
+                pegarDados(
+                    response.data.cliente.userNameCliente,
+                    response.data.cliente.email
+                );
                 console.log(response.data);
                 console.log(response.data.cliente.userNameCliente);
                 history.push("/");

@@ -22,9 +22,11 @@ function App() {
     };
 
     const [userName, setUserName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
 
-    const pegarNome = (nome) => {
+    const pegarDados = (nome, email) => {
         setUserName(nome);
+        setUserEmail(email);
     };
 
     const logout = () => {
@@ -80,10 +82,14 @@ function App() {
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">
-                        <Login onLogin={onLogin} pegarNome={pegarNome} />
+                        <Login onLogin={onLogin} pegarDados={pegarDados} />
                     </Route>
                     <Route path="/carrinho">
-                        <Carrinho produtos={carrinho} />
+                        <Carrinho
+                            produtos={carrinho}
+                            email={userEmail}
+                            removerProduto={removerProduto}
+                        />
                     </Route>
                     <Route path="/produtos">
                         <Produtos adicionaProduto={adicionaProduto} />
