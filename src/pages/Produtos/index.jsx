@@ -13,7 +13,7 @@ const Produtos = ({ adicionaProduto }) => {
     useEffect(() => {
         getProdutos();
     }, []);
-
+    console.log(produtos);
     return (
         <div className="container">
             <div className="row">
@@ -24,6 +24,7 @@ const Produtos = ({ adicionaProduto }) => {
                         nome={produto.nome}
                         preco={produto.preco}
                         imagem={produto.imagemBase64}
+                        codigo={produto.codigo}
                         adicionaProduto={adicionaProduto}
                     />
                 ))}

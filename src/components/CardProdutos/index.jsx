@@ -11,6 +11,7 @@ const CardProdutos = (props) => {
             id: props.id,
             nome: props.nome,
             preco: props.preco,
+            codigo: props.codigo,
             quantidade: 1,
         });
     };
