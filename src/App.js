@@ -11,9 +11,21 @@ import Produtos from "./pages/Produtos";
 import Produto from './pages/Produto';
 import Footer from '../src/components/Footer';
 import Categorias from "./pages/Categorias";
+import { useState } from "react";
+
 import Pagina404 from "./pages/Pagina404";
 
 function App() {
+
+    const [token, setToken] = useState('')
+    const onLogin = (token) => {
+        setToken(token)
+    }
+
+    const logout = () => {
+        setToken('')
+    }
+
     const menu = [
         {
             titulo: "Inicio",
@@ -31,7 +43,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header />
+                <Header token={token} aoLogout={logout} />
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">
@@ -44,7 +56,7 @@ function App() {
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">
-                        <Login />
+                        <Login onLogin={onLogin}/>
                     </Route>
                     <Route path="/carrinho">
                         <Carrinho />

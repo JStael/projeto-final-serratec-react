@@ -2,14 +2,16 @@ import http from "../http";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./estilos.css";
+import { useHistory } from "react-router-dom";
 
 import logoLogin from "../../assets/img/logoLogin.png";
 
-const FormularioLogin = () => {
+const FormularioLogin = ({onLogin}) => {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const manipularEmail = (ev) => setEmail(ev.target.value);
     const manipularSenha = (ev) => setSenha(ev.target.value);
+    const history = useHistory();
 
     const logar = (ev) => {
         ev.preventDefault();
@@ -19,9 +21,9 @@ const FormularioLogin = () => {
 
         http.post("auth", usuario)
             .then((response) => {
-                window.alert("Login efetuado com sucesso!");
-                console.log(response.data);
                 localStorage.setItem("token", response.data.token);
+                onLogin(response.data.user, response.data.access_token)
+                history.push('/')
             })
             .catch((erro) => console.log(erro));
     };
