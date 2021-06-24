@@ -148,7 +148,7 @@ const ClienteCadastrar = () => {
           <label>Estado</label>
           <input required type="text" value={estado} onChange={(evento) => setEstado(evento.target.value)} />
         </div>
-        <button>Salvar</button>
+        <button>Cadastrar</button>
       </form>
     </CardFormulario>
   </div>
