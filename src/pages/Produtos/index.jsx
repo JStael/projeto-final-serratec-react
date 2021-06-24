@@ -2,7 +2,7 @@ import CardProdutos from "../../components/CardProdutos";
 import "./estilos.css";
 import http from "../../components/http";
 import { useState, useEffect } from "react";
-const Produtos = () => {
+const Produtos = ({ adicionaProduto }) => {
     const [produtos, setProdutos] = useState([]);
 
     const getProdutos = () => {
@@ -13,7 +13,6 @@ const Produtos = () => {
     useEffect(() => {
         getProdutos();
     }, []);
-    console.log(produtos);
 
     return (
         <div className="container">
@@ -25,6 +24,7 @@ const Produtos = () => {
                         nome={produto.nome}
                         preco={produto.preco}
                         imagem={produto.imagemBase64}
+                        adicionaProduto={adicionaProduto}
                     />
                 ))}
             </div>

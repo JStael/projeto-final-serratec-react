@@ -6,7 +6,7 @@ const Categorias = () => {
     const [categorias, setCategorias] = useState([]);
 
     const obterCategorias = () => {
-        http.get("categorias")
+        http.get("/categoria/todas")
             .then((response) => {
                 setCategorias(response.data);
             })
@@ -20,12 +20,14 @@ const Categorias = () => {
     return (
         <div className="container">
             <div className="row">
-                <Card id={"item.id"} nome={"item.nome"} url={"produtos"} />
-                <Card id={"item.id"} nome={"item.nome"} url={"produtos"} />
-                <Card id={"item.id"} nome={"item.nome"} url={"produtos"} />
-                {/* {categorias.map((item) =>
-      <Card key={item.id} id={item.id} nome={item.nome} url={'produtos'}/>
-    )} */}
+                {categorias.map((item) => (
+                    <Card
+                        key={item.id}
+                        id={item.id}
+                        nome={item.nome}
+                        url={"produtos"}
+                    />
+                ))}
             </div>
         </div>
     );
