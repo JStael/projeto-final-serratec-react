@@ -48,7 +48,7 @@ const Header = ({nome, token, onLogout}) => {
             <div className="header-carrinho">
                 {verificarLogin()}
                 <div className="carrinho">
-                    <Link to="/carrinho"><i class="fas fa-shopping-cart"></i></Link>
+                    <Link to="/carrinho"><i className="fas fa-shopping-cart"></i></Link>
                     <p></p>
                 </div>
             </div>

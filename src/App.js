@@ -49,7 +49,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header token={token} onLogout={logout} nome={userName} token={token}/>
+                <Header token={token} onLogout={logout} nome={userName} token={token} />
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">

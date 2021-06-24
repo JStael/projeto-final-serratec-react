@@ -1,19 +1,32 @@
 import "./estilos.css";
 import logoCarrinho from "../../assets/img/carrinho.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const Carrinho = () => {
+const Carrinho = ({pegarProdutos}) => {
 
     const formatter = new Intl.NumberFormat('pr-BR', {
         style: 'currency',
         currency: 'BRL',
     });
 
+    const [carrinho, setCarrinho] = useState([])
+
+    const headerPagina = () => {
+      if (carrinho) return <p><i class="fas fa-shopping-cart"></i> Carrinho de compras</p>
+      
+      return (
+        <>
+          <img src={logoCarrinho} alt="Logo do carrinho de compras" />
+          <p>Seu carrinho está vazio</p>
+        </>
+      )
+    }
+
   return (
     <section>
       <div className="header">
-        <img src={logoCarrinho} alt="Logo do carrinho de compras" />
-        <p>Seu carrinho está vazio :(</p>
+        {headerPagina()}
       </div>
       <div>
        
