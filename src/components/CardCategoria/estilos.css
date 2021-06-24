@@ -1,13 +1,16 @@
 .card {
   box-sizing: border-box;
   background-color: #1abc9c;
-  padding: 8px;
+  /* padding: 8px; */
   border-radius: 5px;
   border-style: solid;
   border-color: #FF9A16;
-  width: 50%;
-  margin: 0 auto;
-  margin-bottom: 8px;
+  /* width: 50%; */
+  width: 15rem;
+  /* margin: 0 auto; */
+  padding: 5px;
+  margin: 5px;
+  /* margin-bottom: 8px; */
 }
 
 .link {
