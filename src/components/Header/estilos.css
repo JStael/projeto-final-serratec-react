@@ -14,6 +14,7 @@ header a {
     color: #fcfcfc;
     display: flex;  
     align-items: center;
+    justify-content: center;
     padding: 2px 10px;
 }
 
@@ -31,4 +32,5 @@ header a p {
 .usuarioImg {
     width: 25px;
     height: 25px;
+    margin: 0;
 }
