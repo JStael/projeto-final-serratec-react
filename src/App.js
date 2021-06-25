@@ -60,16 +60,12 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-<<<<<<< HEAD
-                <Header token={token} onLogout={logout} nome={userName} token={token} />
-=======
                 <Header
                     token={token}
                     onLogout={logout}
                     nome={userName}
                     token={token}
                 />
->>>>>>> 6af1f9eec195159ac598dfb90b1da7ad5ae27fbb
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">
