@@ -1,9 +1,9 @@
 import "./estilos.css";
 import logoCarrinho from "../../assets/img/carrinho.png";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import http from "../../components/http";
 
-const Carrinho = ({ produtos, email, removerProduto }) => {
+const Carrinho = ({ produtos, removerProduto }) => {
     const formatter = new Intl.NumberFormat("pr-BR", {
         style: "currency",
         currency: "BRL",
@@ -63,12 +63,6 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
                                 <td>{formatter.format(produto.preco)}</td>
                                 <td>{produto.codigo}</td>
                                 <td>
-                                    <Link
-                                        className="btn btn-sm btn-outline-info"
-                                        to={`/produtos/${produto.id}`}
-                                    >
-                                        editar
-                                    </Link>
                                     {
                                         <button
                                             type="button"
@@ -85,6 +79,7 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
                         ))}
                     </tbody>
                 </table>
+                <h3>Valor total de {formatter.format()}</h3>
                 <button type="button" onClick={novoPedido}>
                     Finalizar Pedido
                 </button>
