@@ -1,25 +1,30 @@
 .navbar {
-  background: #2c3e50; 
-  display: flex;
-  justify-content: flex-end;
+    background: #2c3e50;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar ul {
-  padding: 3px;
-  margin: 0;
+    padding: 3px;
+    margin: 0;
 }
 
 .navbar ul li {
-  display: inline-block;
-  margin-left: 20px;
+    display: inline-block;
+    margin-left: 20px;
 }
 
 .navbar ul li a {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+.novaNav {
+    padding-top: 0;
+    padding-bottom: 5px;
+    padding-right: 8px;
 }

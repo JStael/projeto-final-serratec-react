@@ -26,6 +26,7 @@ const CardProdutos = (props) => {
                 <li className="list-group-item">
                     {formatter.format(props.preco)}
                 </li>
+                <input type="number" />
             </ul>
             <div className="card-body">
                 <Link to={`/produto/id/${props.id}`}>Ver detalhes</Link>

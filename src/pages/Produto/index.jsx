@@ -21,7 +21,7 @@ const Produto = () => {
             <div className="container">
                 <div className="row row-cols-2">
                     <div className="col inf">
-                        <img src={produto.imagemBase64} alt={produto.nome} />
+                        <img className="imagemDetalhes" src={produto.imagemBase64} alt={produto.nome} />
                     </div>
                     <div className="col card card-body inf">
                         <h1 className="produto">{produto.nome}</h1>

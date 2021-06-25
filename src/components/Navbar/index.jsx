@@ -2,7 +2,7 @@ import './estilos.css'
 import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
-  return (<nav className="navbar">
+  return (<nav className="navbar novaNav">
     <ul>
       {props.navbar.map(item =>
         <li key={item.titulo}>
