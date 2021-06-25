@@ -28,7 +28,7 @@ const CardProdutos = (props) => {
                 </li>
             </ul>
             <div className="card-body">
-                <Link to={`/produto/${props.id}`}>Ver detalhes</Link>
+                <Link to={`/produto/id/${props.id}`}>Ver detalhes</Link>
             </div>
             <button
                 className="btn btn-warning btnAdicionar"

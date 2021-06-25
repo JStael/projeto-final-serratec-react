@@ -12,6 +12,7 @@ import Produto from "./pages/Produto";
 import Footer from "../src/components/Footer";
 import Categorias from "./pages/Categorias";
 import { useState } from "react";
+import Finalizar from "./pages/Finalizar";
 
 import Pagina404 from "./pages/Pagina404";
 
@@ -22,11 +23,9 @@ function App() {
     };
 
     const [userName, setUserName] = useState("");
-    const [userEmail, setUserEmail] = useState("");
 
-    const pegarDados = (nome, email) => {
+    const pegarNome = (nome) => {
         setUserName(nome);
-        setUserEmail(email);
     };
 
     const logout = () => {
@@ -60,12 +59,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header
-                    token={token}
-                    onLogout={logout}
-                    nome={userName}
-                    token={token}
-                />
+                <Header token={token} onLogout={logout} nome={userName} carrinho={carrinho}/>
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">
@@ -78,23 +72,25 @@ function App() {
                         <ClienteEditar />
                     </Route>
                     <Route path="/login">
-                        <Login onLogin={onLogin} pegarDados={pegarDados} />
+                        <Login onLogin={onLogin} pegarNome={pegarNome} />
                     </Route>
                     <Route path="/carrinho">
                         <Carrinho
                             produtos={carrinho}
-                            email={userEmail}
                             removerProduto={removerProduto}
                         />
                     </Route>
                     <Route path="/produtos">
                         <Produtos adicionaProduto={adicionaProduto} />
                     </Route>
-                    <Route path="/produto/:id">
+                    <Route path="/produto/id/:id">
                         <Produto adicionaProduto={adicionaProduto} />
                     </Route>
                     <Route path="/categorias">
                         <Categorias />
+                    </Route>
+                    <Route path="/finalizar/:id">
+                        <Finalizar />
                     </Route>
                     <Route>
                         <Pagina404 />
