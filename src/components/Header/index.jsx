@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import "./estilos.css";
 
-const Header = ({ nome, token, onLogout }) => {
+const Header = ({ nome, token, onLogout, carrinho }) => {
     const history = useHistory();
 
     const logout = () => {
@@ -13,6 +13,8 @@ const Header = ({ nome, token, onLogout }) => {
         localStorage.removeItem("token");
         localStorage.removeItem("userName");
     };
+
+    const numeroDeProdutos = carrinho.length
 
     const verificarLogin = () => {
         if (token) {
@@ -89,7 +91,7 @@ const Header = ({ nome, token, onLogout }) => {
                     <Link to="/carrinho">
                         <i className="fas fa-shopping-cart"></i>
                     </Link>
-                    <p></p>
+                    <p>{numeroDeProdutos}</p>
                 </div>
             </div>
         </header>

@@ -103,4 +103,8 @@ header {
     position: absolute;
     top: .4rem;
     right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fcfcfc;
 }

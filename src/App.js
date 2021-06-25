@@ -59,7 +59,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header token={token} onLogout={logout} nome={userName} />
+                <Header token={token} onLogout={logout} nome={userName} carrinho={carrinho}/>
                 <Navbar navbar={menu} />
                 <Switch>
                     <Route exact path="/">
@@ -83,7 +83,7 @@ function App() {
                     <Route path="/produtos">
                         <Produtos adicionaProduto={adicionaProduto} />
                     </Route>
-                    <Route path="/produto/:id">
+                    <Route path="/produto/id/:id">
                         <Produto adicionaProduto={adicionaProduto} />
                     </Route>
                     <Route path="/categorias">

@@ -22,7 +22,6 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
                 quantidade: item.quantidade,
             });
         });
-        console.log(pedido);
 
         http.post("pedido", pedido)
             .then((response) => {
@@ -35,13 +34,37 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
             });
     };
 
+    const numeroDeProdutos = produtos.length
+
+    const verificarCarrinho = () => {
+        if (numeroDeProdutos) {
+            return <p><i className="fas fa-shopping-cart"></i> Carrinho de compras</p>
+        }
+        return (
+            <>
+                <img src={logoCarrinho} alt="Logo do carrinho de compras" />
+                <p>Seu carrinho está vazio </p>
+            </>
+        )
+    }
+
+    const btnFinalizar = () => {
+        if (numeroDeProdutos) {
+            return (
+                <button type="button" onClick={novoPedido} className="btnFinalizar btn btn-success">
+                    Finalizar Pedido
+                </button>
+            )
+        }
+        return ''
+    }
+
     return (
         <section>
             <div className="header">
-                <img src={logoCarrinho} alt="Logo do carrinho de compras" />
-                <p>Seu carrinho está vazio </p>
+                {verificarCarrinho()}
             </div>
-            <div>
+            <div className="bodyCarrinho">
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -57,18 +80,13 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
                             <tr
                                 key={produto.id}
                                 numeroPedido={produto.numeroPedido}
+                                className="linha"
                             >
                                 <td>{produto.quantidade}</td>
                                 <td>{produto.nome}</td>
                                 <td>{formatter.format(produto.preco)}</td>
                                 <td>{produto.codigo}</td>
-                                <td>
-                                    <Link
-                                        className="btn btn-sm btn-outline-info"
-                                        to={`/produtos/${produto.id}`}
-                                    >
-                                        editar
-                                    </Link>
+                                <td className="btnExcluir">
                                     {
                                         <button
                                             type="button"
@@ -85,10 +103,7 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
                         ))}
                     </tbody>
                 </table>
-                <button type="button" onClick={novoPedido}>
-                    Finalizar Pedido
-                </button>
-                <ul></ul>
+                {btnFinalizar()}                        
             </div>
         </section>
     );
