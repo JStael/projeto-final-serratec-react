@@ -1,7 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import imagem from "./ps5.jpg";
 import "./estilos.css";
 import http from "../../components/http";
 const Produto = () => {

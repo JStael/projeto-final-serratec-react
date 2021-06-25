@@ -18,6 +18,7 @@ const FormularioLogin = ({ onLogin, pegarNome }) => {
         const usuario = {};
         usuario.user = email;
         usuario.pass = senha;
+        localStorage.setItem("email", email);
 
         http.post("auth", usuario)
             .then((response) => {

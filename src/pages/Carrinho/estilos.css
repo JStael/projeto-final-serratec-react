@@ -6,20 +6,22 @@ section {
 }
 
 .header {
-    padding: 30px;
+    height: 120px;
     display: flex;
-    align-items:flex-end;
+    align-items:center;
     margin-bottom: 30px;
+    padding-left: 25px;
     background-color: #fcfcfc;
 }
 
 .header p {
     margin: 20px;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .header img {
-    width: 100px;
+    width: 80px;
+    margin: 0;
 }
 
 table {
