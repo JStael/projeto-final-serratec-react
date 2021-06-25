@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./estilo.css";
 const CardProdutos = (props) => {
+    const [quantidade, setQuantidade] = useState("");
+
     const formatter = new Intl.NumberFormat("pr-BR", {
         style: "currency",
         currency: "BRL",
@@ -12,7 +15,7 @@ const CardProdutos = (props) => {
             nome: props.nome,
             preco: props.preco,
             codigo: props.codigo,
-            quantidade: 1,
+            quantidade: quantidade,
         });
     };
 
@@ -26,11 +29,17 @@ const CardProdutos = (props) => {
                 <li className="list-group-item">
                     {formatter.format(props.preco)}
                 </li>
-                <input type="number" />
             </ul>
             <div className="card-body">
                 <Link to={`/produto/id/${props.id}`}>Ver detalhes</Link>
             </div>
+            <input
+                className="form-control"
+                type="number"
+                min="1"
+                onkeypress="return event.charCode >= 48"
+                onChange={(evento) => setQuantidade(evento.target.value)}
+            />
             <button
                 className="btn btn-warning btnAdicionar"
                 onClick={adicionar}
