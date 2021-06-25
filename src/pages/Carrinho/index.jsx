@@ -14,19 +14,20 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
     const novoPedido = () => {
         const pedido = {
             email: localStorage.getItem("email"),
-            itens: [
-                produtos.map((item) => ({
-                    codigoProduto: item.codigo,
-                    quantidade: item.quantidade,
-                })),
-            ],
+            itens: [],
         };
+        produtos.forEach((item) => {
+            pedido.itens.push({
+                codigoProduto: item.codigo,
+                quantidade: item.quantidade,
+            });
+        });
         console.log(pedido);
 
         http.post("pedido", pedido)
             .then((response) => {
                 console.log(response.data);
-                history.push("/finalizar/" + response.data.numeroPedido);
+                history.push("/finalizar/" + response.data);
             })
             .catch((erro) => {
                 console.log("Algo deu errado");
@@ -53,7 +54,10 @@ const Carrinho = ({ produtos, email, removerProduto }) => {
                     </thead>
                     <tbody>
                         {produtos.map((produto, indice) => (
-                            <tr key={produto.id}>
+                            <tr
+                                key={produto.id}
+                                numeroPedido={produto.numeroPedido}
+                            >
                                 <td>{produto.quantidade}</td>
                                 <td>{produto.nome}</td>
                                 <td>{formatter.format(produto.preco)}</td>

@@ -12,6 +12,7 @@ import Produto from "./pages/Produto";
 import Footer from "../src/components/Footer";
 import Categorias from "./pages/Categorias";
 import { useState } from "react";
+import Finalizar from "./pages/Finalizar";
 
 import Pagina404 from "./pages/Pagina404";
 
@@ -87,6 +88,9 @@ function App() {
                     </Route>
                     <Route path="/categorias">
                         <Categorias />
+                    </Route>
+                    <Route path="/finalizar/:id">
+                        <Finalizar />
                     </Route>
                     <Route>
                         <Pagina404 />
