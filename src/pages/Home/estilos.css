@@ -1,0 +1,15 @@
+.carousel-item img{
+    width: auto;
+    max-height: 219.91px;
+    margin: auto; 
+    display: block;
+    }
+.centralizar{
+    text-align: center;
+}
+button{
+    max-width:fit-content;
+}
+.clicavel:hover{
+ cursor: pointer;
+}  
